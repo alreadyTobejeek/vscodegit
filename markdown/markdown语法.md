@@ -92,6 +92,15 @@ class SomeClass:
 - 可以创建行内公式，例如$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
 - 块级公式：$$ x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a} $$
 
+># 待办事项
+
+- "- []"表示未勾选
+- "- [x]"表示勾选
+- "-"/"[]"/内容之间都有一个空格
+
+- [] xinwen
+- [x] hao
+
 ># 流程图
 - 必须带有```flow  ```(flow为关键字)
 ```flow
