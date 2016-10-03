@@ -49,12 +49,25 @@
 *cjh*
 
 ># 代码
-* 用两个 ` 把中间的代码包裹起来
+* 用三个 ` 把中间的代码包裹起来
 
-``
+```
 var gulp = require('gulp'),
     plugins = require('gulp-load-plugins')();
-``
+```
+
+``` python
+@requires_authorization
+def somefunc(param1='', param2=0):
+    '''A docstring'''
+    if param1 > param2: # interesting
+        print 'Greater'
+    return (param2 - param1 + 1) or None
+class SomeClass:
+    pass
+>>> message = '''interpreter
+... prompt'''
+```
 
 ># 表格
 * 用||包围，第二行为格式，: 位置为对齐方向，默认左对齐
@@ -66,9 +79,42 @@ var gulp = require('gulp'),
 |col3.1    |col3.2      |col3.3    |
 
 ># 分割线
-* 分割线的语法只需要三个 * 号
+* 分割线的语法只需要三个 * 号或-号
 
 ***
+
+># 带有超链接文字
+
+- Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— [维基百科](http://www.baidu.com)
+
+># LaTeX公式
+
+- 可以创建行内公式，例如$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
+- 块级公式：$$ x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a} $$
+
+># 流程图
+- 必须带有```flow  ```(flow为关键字)
+```flow
+st=>start: Start
+e=>end
+op=>operation: My Operation
+cond=>condition: Yes or No?
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+># 时序图
+
+```sequence
+Alice->Bob: Hello Bob!
+Note right of Bob: Bob thinks
+Bob-->Alice: I am a thinker!
+```
+># 笔记本和标签
+
+**马克飞象**增加了`@(笔记本)[标签A|标签B]`语法, 以选择笔记本和添加标签。 **绑定账号后**， 输入`(`自动会出现笔记本列表，请从中选择。
+
 
 
 <table style="border: 1px solid red">
